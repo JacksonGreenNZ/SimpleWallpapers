@@ -1,3 +1,7 @@
 # Personal wallpaper collections
 /Standard/*
 /Ultrawide/*
+
+# Keep the placeholder files that preserve the folder structure
+!/Standard/*.txt
+!/Ultrawide/*.txt
