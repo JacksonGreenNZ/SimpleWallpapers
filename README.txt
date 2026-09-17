@@ -23,6 +23,7 @@ The folder should contain:
 
     wallpapers.ps1
     run-wallpaper-hidden.vbs
+    install-wallpaper-rotator.ps1
     create-wallpaper-shortcuts.ps1
     clear-wallpaper-history.ps1
     cycle-wallpaper-mode.ps1
@@ -45,6 +46,22 @@ The following image types are supported:
 ========================================================================
 2. CREATE THE HOURLY TASK
 ========================================================================
+
+The easiest setup method is to open PowerShell in this folder and run:
+
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\install-wallpaper-rotator.ps1
+
+This creates the desktop shortcuts, applies the first wallpaper, and
+creates or updates the "Set Wallpaper on Startup" task for the current
+user. It uses Windows PowerShell and Task Scheduler already included
+with Windows; it does not install an application or require
+administrator access.
+
+If PowerShell or user-created scheduled tasks are restricted by your
+organisation, use the manual Task Scheduler setup below or ask IT to
+approve the scripts and task.
+
+MANUAL TASK SCHEDULER SETUP
 
 The task runs once when you sign in and then once every hour.
 
